@@ -3,21 +3,20 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-
 }
 
 
 #grid-container{
     display: flex;
-    flex-flow: row wrap;
-    height: 1024px;
-    width: 1024px;
+    height: 400px;
+    width: 400px;
     border-style: solid;
     border-width: thin;
+    flex-wrap: wrap;
 }
 
 .cell{
-    border-color: 'light-grey';
+    border-color: lightgray;
+    display: flex;
+
 }
