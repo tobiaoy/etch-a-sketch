@@ -12,11 +12,13 @@ body{
     width: 400px;
     border-style: solid;
     border-width: thin;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
 .cell{
-    border-color: lightgray;
-    display: flex;
+    background-color: lightgray;
+}
 
+.active{
+    background-color: blue;
 }
