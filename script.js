@@ -1,7 +1,7 @@
 const grid = document.querySelector('#grid-container'); //grid for boxes
 const clearButton = document.querySelector('.clear-grid'); //clear button
-const changeButton = document.querySelector('#applySquares'); // applies square dial change
 const squareDial = document.querySelector('#changeSquares'); // changes number of squares
+let dimensionCheck = document.querySelector('.square_set');// to be able to see the dimensions of the grid
 
 let squaresPerSide = 16;
 let cells = [];
@@ -32,21 +32,19 @@ function clearGrid() {
     createGrid(squaresPerSide);
   }
 
+//text to be able to see the changed dimensions
+dimensionCheck.textContent = `${squaresPerSide} x ${squaresPerSide}`;
+
 //function to change the number of squares
 function changeSquares(e){
     squaresPerSide = e.target.value;
+    dimensionCheck.textContent = `${squaresPerSide} x ${squaresPerSide}`;
 }
-
-//function to apply the change of squares
-function applyChange(){
-    clearGrid();
-}
-
 
 
 clearButton.addEventListener('click', clearGrid);
 squareDial.addEventListener('input', changeSquares);
-changeButton.addEventListener('click', applyChange);
+squareDial.addEventListener('mouseup', clearGrid);
 grid.addEventListener('mouseover', function (e) {
     if (e.target.matches('.cell')){
         e.target.classList.add('active');
