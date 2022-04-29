@@ -13,12 +13,17 @@
     <h2>Etch - A - Sketch</h2>
     <div id = controls-container>
         <button class = clear-grid>Clear Grid</button>
-        <h4 class = square_set></h4>
-        <input type="range" id="changeSquares" name="changeSquares" min="5" max="100" value="16">
+        <div id = manageSize>
+            <h4 class = square_set></h4>
+            <input type="range" id="changeSquares" name="changeSquares" min="5" max="100" value="16">
+        </div>
     </div>
     <p></p>
     <div id="grid-container"></div>
-
+    <div id= colors>
+        <h4>Pick a color</h4>
+        <input type="color" id="favColor" name="favColor" value="#ff0000">
+    </div>
     
 </body>
 </html>
