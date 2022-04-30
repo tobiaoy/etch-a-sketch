@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Open+Sans:ital@0;1&family=Rubik:ital@0;1&family=Source+Sans+Pro:ital,wght@0,200;1,200;1,600&display=swap');
+
+/*
+Fonts
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+
+*/
+
 body{
     display: flex;
     flex-direction: column;
@@ -9,32 +21,38 @@ body{
 
 
 /* Title */
-h2 {
-
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
 }
 
 /* Control Section */
 /* Clear Button */
+#control-container > button{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 25px;
+    max-width: auto;
+}
 /* Square Slider */
 /* Color Picker */
 
 
 /* Grid */
-#grid-container{
-    display: flex;
-    height: 400px;
-    width: 400px;
+#grid_container{
+    display: grid;
+    height: 500px;
+    width: 500px;
     border-style: solid;
     border-width: thin;
-    flex-flow: row wrap;
 }
 
 .cell{
-    background-color: white;
-}
-
-.active{
-    background-color: blue;
+    border-style: solid;
+    border-width: thin;
+    border-color: lightgray;
 }
 
 /* Footer */
