@@ -5,11 +5,12 @@ const squareDial = document.querySelector('#changeSquares'); // changes number o
 let dimensionCheck = document.querySelector('.square_set');// to be able to see the dimensions of the grid
 let colorPicker = document.querySelector('#favColor'); //color picker 
     let currColor = 'blue'; //sets default color to blue
-let squaresPerSide = 16;
+let squaresPerSide = squareDial.value;
 let cells = [];
 
 //function to create the grid
 function createGrid(squaresPerSide){
+    grid.innerHTML = '';
     let numOfCells = squaresPerSide ** 2;
     let cellSize = grid.clientWidth / squaresPerSide;
     
@@ -22,9 +23,7 @@ function createGrid(squaresPerSide){
     }
 }
 
-if (squaresPerSide !== 0){
-    createGrid(squaresPerSide);
-}
+
 
 //function to clear grid
 function clearGrid() {
@@ -57,4 +56,4 @@ grid.addEventListener('mouseover', function (e) {
 colorPicker.addEventListener('input', function(e){
     currColor = e.target.value;
 })
-
+window.addEventListener('onload', createGrid(squaresPerSide))
