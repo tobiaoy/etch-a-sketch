@@ -36,12 +36,12 @@ function clearGrid() {
   }
 
 //text to be able to see the changed dimensions
-dimensionCheck.textContent = `${squaresPerSide} x ${squaresPerSide}`;
+dimensionCheck.textContent = `Dimensions: ${squaresPerSide} x ${squaresPerSide}`;
 
 //function to change the number of squares
 function changeSquares(e){
     squaresPerSide = e.target.value;
-    dimensionCheck.textContent = `${squaresPerSide} x ${squaresPerSide}`;
+    dimensionCheck.textContent = `Dimensions: ${squaresPerSide} x ${squaresPerSide}`;
 }
 
 // function to make a rainbow 'pen' 
